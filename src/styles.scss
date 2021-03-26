@@ -34,12 +34,12 @@ body, html {
 }
   .owl-item.active.center{
     .header-text{
-    font-size: 40px;
-    line-height: 58px;
+        font-size: 33px;
+        line-height: 47px;
     }
     border-radius: 16px;
     border-bottom: 6px solid #FFC000;
-    transform:scale(1);
+    transform: scale(1, 1);
  
   }
   .owl-nav {
@@ -49,32 +49,35 @@ body, html {
     background: #FFC300;
     color: #232323;
 }
-.owl-nav button.owl-next{
+.owl-carousel .owl-nav button.owl-next:hover{
     background: #FFC300;
     color: #232323;
+}
+.owl-carousel{
+    height: 500px;
 }
 @media (min-width: 1080px){
     .owl-carousel .owl-nav button.owl-prev{
         position: absolute;
-        left: 189px;
-        top: 412px;
+        left: 206px;
+        top: 377px;
     }
     .owl-nav button.owl-next{
         position: absolute;
-        right:189px;
-        top: 412px;
+        right:206px;
+        top: 377px;
     }
 }
 @media (min-width: 1366px){
     .owl-carousel .owl-nav button.owl-prev{
         position: absolute;
-        left: 239px;
-        top: 412px;
+        left: 257px;
+        top: 380px;
     }
     .owl-nav button.owl-next{
         position: absolute;
-        right: 239px;
-        top: 412px;
+        right: 257px;
+        top: 380px;
     }
  
    
@@ -82,16 +85,18 @@ body, html {
 @media (min-width: 1920px){
     .owl-carousel .owl-nav button.owl-prev{
         position: absolute;
-        left: 543px;
-        top: 412px;
+        left: 545px;
+        top: 382px;
     }
     .owl-nav button.owl-next{
         position: absolute;
-        right: 543px;
-        top: 412px;
+        right: 545px;
+        top: 382px;
     }
  
    
 }
 
   
+// .owl-carousel .owl-item.big div {}
+// .owl-carousel .owl-item.medium div {left: 0px;}

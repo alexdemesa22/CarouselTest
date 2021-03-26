@@ -48,18 +48,35 @@ export class CarouselComponent implements OnInit {
         margin:10,
         responsive:{
           1080:{
-            items:3
+            items:3,
+            stagePadding:80,
           },
           1366:{
-            items:3
+            items:3,
+            stagePadding:80,
           },
           1920:{
             items:5,
             stagePadding:0,
-            nav: true,
+           
           }
+         
         }
+        
       });
+       // @ts-ignore
+       $owl.on('translate.owl.carousel', function(e){
+         // @ts-ignore
+        var idx = e.item.index;
+        console.log(idx)
+        $('.owl-item.big').removeClass('big');
+        $('.owl-item.medium').removeClass('medium');
+        $('.owl-item').eq(idx).addClass('big');
+        $('.owl-item').eq(idx-1).addClass('medium');
+        $('.owl-item').eq(idx+1).addClass('medium');
+        $('.owl-item').eq(idx-2).addClass('medium');
+        $('.owl-item').eq(idx+2).addClass('medium');
+    });
 
         $(document).on('click', '.owl-item>div', function() {
           // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel

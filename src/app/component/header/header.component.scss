@@ -64,6 +64,9 @@
     }
   }
   @media (min-width: 1080px){
+    .header-left{
+      display: none;
+    }
     .custom-logo{
         position: absolute;
         left: 140px;
@@ -92,6 +95,9 @@
     }
 }
 @media (min-width: 1366px){
+  .header-left{
+    display: block;
+  }
     .custom-logo{
         position: absolute;
         left: 225px;
@@ -107,6 +113,9 @@
     }
 }
 @media (min-width: 1920px){
+  .header-left{
+    display: block;
+  }
     .custom-logo{
         position: absolute;
         left: 405px;
