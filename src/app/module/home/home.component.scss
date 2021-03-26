@@ -1,0 +1,77 @@
+.custom-container{
+    height: 100%;
+    width: 100%;
+}
+.left-container{
+    background-color: #FF0000;
+    width: auto;
+}
+.right-container{
+    background-color: #FF0000;
+    width: auto;
+}
+.mid-container{
+    width: 100%;
+    z-index: 999999;
+}
+
+.carousel-container{
+    position: absolute;
+    
+    top: 263px;
+
+}
+@media (min-width: 1080px){
+    .custom-message{
+        width: auto;
+        position: absolute;
+        left: 186px;
+        top: -22px;
+        p.regular{
+            font-size: 24px;
+            line-height: 28px;
+            margin:0px;
+            font-family: 'Work Sans',sans-serif;
+            letter-spacing: -0.2px;
+            color: #232323; 
+        }
+        p.semibold{
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 600;
+            font-family: 'Work Sans',sans-serif;
+            letter-spacing: -0.2px;
+            color: #232323; 
+        }
+    }
+}
+@media (min-width: 1366px){
+    .custom-message{
+        width: auto;
+        position: absolute;
+        left: 205px;        
+        top: -22px;
+    }
+   
+     .left-container{
+
+    }
+    .mid-container{
+        
+    }
+    .right-container{
+
+    }
+ 
+   
+}
+@media (min-width: 1920px){
+    .custom-message{
+        width: auto;
+        position: absolute;
+        left: 514px;
+        top: -22px;
+    }
+ 
+   
+}

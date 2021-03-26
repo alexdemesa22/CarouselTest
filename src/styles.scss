@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.primary-text{
+    font-size: 16px;
+    line-height: 23px;
+    font-family: 'Work Sans',sans-serif;
+    letter-spacing: -0.2px;
+    color: #232323;
+}
+.header-text{
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Work Sans',sans-serif;
+    letter-spacing: -0.2px;
+    font-weight: 600;
+    color: #232323;
+}
+.subtext{
+    color: #232323;
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    line-height: 32px;
+}
+  .owl-item.active.center{
+    .header-text{
+    font-size: 40px;
+    line-height: 58px;
+    }
+    border-radius: 16px;
+    border-bottom: 6px solid #FFC000;
+    transform:scale(1);
+ 
+  }
+  .owl-nav {
+    text-align: center;
+}
+.owl-carousel .owl-nav button.owl-prev:hover{
+    background: #FFC300;
+    color: #232323;
+}
+.owl-nav button.owl-next{
+    background: #FFC300;
+    color: #232323;
+}
+@media (min-width: 1080px){
+    .owl-carousel .owl-nav button.owl-prev{
+        position: absolute;
+        left: 189px;
+        top: 412px;
+    }
+    .owl-nav button.owl-next{
+        position: absolute;
+        right:189px;
+        top: 412px;
+    }
+}
+@media (min-width: 1366px){
+    .owl-carousel .owl-nav button.owl-prev{
+        position: absolute;
+        left: 239px;
+        top: 412px;
+    }
+    .owl-nav button.owl-next{
+        position: absolute;
+        right: 239px;
+        top: 412px;
+    }
+ 
+   
+}
+@media (min-width: 1920px){
+    .owl-carousel .owl-nav button.owl-prev{
+        position: absolute;
+        left: 543px;
+        top: 412px;
+    }
+    .owl-nav button.owl-next{
+        position: absolute;
+        right: 543px;
+        top: 412px;
+    }
+ 
+   
+}
+
+  
