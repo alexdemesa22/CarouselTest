@@ -1,5 +1,4 @@
 import { Component, OnInit, AfterViewInit, ViewChild  } from '@angular/core';
-import {OwlCarousel} from 'ngx-owl-carousel';
 import Draggable from "gsap/Draggable"; 
 import { TweenLite, TimelineMax,Linear,TweenMax } from "gsap/TweenMax";
 declare const Owl:any;
