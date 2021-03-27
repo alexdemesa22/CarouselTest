@@ -62,20 +62,6 @@ export class CarouselComponent implements OnInit {
           }
          
         }
-        
-      });
-       // @ts-ignore
-       $owl.on('translate.owl.carousel', function(e){
-         // @ts-ignore
-        var idx = e.item.index;
-        console.log(idx)
-        $('.owl-item.big').removeClass('big');
-        $('.owl-item.medium').removeClass('medium');
-        $('.owl-item').eq(idx).addClass('big');
-        $('.owl-item').eq(idx-1).addClass('medium');
-        $('.owl-item').eq(idx+1).addClass('medium');
-        $('.owl-item').eq(idx-2).addClass('medium');
-        $('.owl-item').eq(idx+2).addClass('medium');
     });
 
         $(document).on('click', '.owl-item>div', function() {
@@ -89,7 +75,11 @@ export class CarouselComponent implements OnInit {
 }
 
   ngOnInit(): void {
-   
+   if(null == 0){
+    console.log("true")
+   }else{
+    console.log("false")
+   }
 
   }
   
