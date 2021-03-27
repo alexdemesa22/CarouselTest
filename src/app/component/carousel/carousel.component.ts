@@ -29,12 +29,12 @@ export class CarouselComponent implements OnInit {
    
   }
   ngAfterViewInit(){
-    $(document).ready(function(){
+    jQuery(document).ready(function(){
       // @ts-ignore
       var $owl = $('.owl-carousel');
 
       $owl.children().each( function( index ) {
-        $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
+        jQuery(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
       });
       // @ts-ignore
       $owl.owlCarousel({
@@ -63,10 +63,10 @@ export class CarouselComponent implements OnInit {
         }
     });
 
-        $(document).on('click', '.owl-item>div', function() {
+    jQuery(document).on('click', '.owl-item>div', function() {
           // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
           var $speed = 300;  // in ms
-          $owl.trigger('to.owl.carousel', [$(this).data( 'position' ), $speed] );
+          $owl.trigger('to.owl.carousel', [jQuery(this).data( 'position' ), $speed] );
         });
             
     });
@@ -74,11 +74,6 @@ export class CarouselComponent implements OnInit {
 }
 
   ngOnInit(): void {
-   if(null == 0){
-    console.log("true")
-   }else{
-    console.log("false")
-   }
 
   }
   
