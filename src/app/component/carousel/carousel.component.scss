@@ -1,5 +1,5 @@
 .carousel-card{
-  height: 450px;
+  height: 500px;
   width: 100%;
   border-radius: 16px 16px 12px 12px;
   background: linear-gradient(180deg,#FFFFFF,#EBEBEB);
@@ -25,6 +25,9 @@
     display: block;
 }
 
+.hide-start{
+  display: none;
+}
 
 
   

@@ -1,6 +1,4 @@
 import { Component, OnInit, AfterViewInit, ViewChild  } from '@angular/core';
-import Draggable from "gsap/Draggable"; 
-import { TweenLite, TimelineMax,Linear,TweenMax } from "gsap/TweenMax";
 declare const Owl:any;
 
 // declare var TweenMax: any;
@@ -13,18 +11,30 @@ declare const Owl:any;
 
 export class CarouselComponent implements OnInit {
 
-  item={
-    items:4,
-    dots: false,
-    navigation: false,
-    center:true,
-    loop:true,
-    nav:true,
-    margin:10,
-    stagePadding: 10,
-    animateOut:true,
-    animateIn:true
-  };
+  data=[
+      {
+      title:"Get a Device",
+      link:'get-device',
+      active:true
+      },
+      {
+        title:"Add a phone line",
+        link:'phone-line'
+      },
+      {
+        title:"Home internet",
+        link:'home-internet'
+      },
+      {
+        title:"Mobile internet",
+        link:'mobile-internet'
+      },
+      {
+        title:"Upgrade",
+        link:'upgrade'
+      },
+      
+  ]
   constructor() {
    
   }
@@ -33,9 +43,6 @@ export class CarouselComponent implements OnInit {
       // @ts-ignore
       var $owl = $('.owl-carousel');
 
-      $owl.children().each( function( index ) {
-        jQuery(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
-      });
       // @ts-ignore
       $owl.owlCarousel({
         center: true,
@@ -47,12 +54,12 @@ export class CarouselComponent implements OnInit {
         margin:10,
         responsive:{
           1080:{
-            items:3,
-            stagePadding:80,
+            items:4,
+            stagePadding:10,
           },
           1366:{
-            items:3,
-            stagePadding:80,
+            items:4,
+            stagePadding:10,
           },
           1920:{
             items:5,
@@ -62,14 +69,26 @@ export class CarouselComponent implements OnInit {
          
         }
     });
-
-    jQuery(document).on('click', '.owl-item>div', function() {
-          // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
-          var $speed = 300;  // in ms
-          $owl.trigger('to.owl.carousel', [jQuery(this).data( 'position' ), $speed] );
-        });
+    $owl.on('translate.owl.carousel', function(e){
+    // @ts-ignore
+      var idx = e.item.index;
+      var con = $('.owl-item.center').hasClass('active');
+      console.log("second");
+      if(con){
+        $('p.subtext.text-center').eq(idx).removeClass('hide-start');
+        $('p.subtext.text-center').eq(idx-1).addClass('hide-start');
+        $('p.subtext.text-center').eq(idx+1).addClass('hide-start');
+        $('p.subtext.text-center').eq(idx-2).addClass('hide-start');
+        $('p.subtext.text-center').eq(idx+2).addClass('hide-start');
+      }
+      
+  });
+   
+  
             
     });
+    
+    
     
 }
 

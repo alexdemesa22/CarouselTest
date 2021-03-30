@@ -1,10 +1,11 @@
+<app-progressive [progress]=15 [total]=100></app-progressive>
 <div class="main-header">
-  <span class="custom-logo" ><img src="../../../CarouselTest/assets/image/logo.png" alt="" style="width:80px; height:80px;"></span>
+  <span class="custom-logo" [routerLink]="['/']" ><img src="../../../CarouselTest/assets/image/logo.png" alt="" style="width:80px; height:80px;"></span>
   <div class="header">
     <div class="header-left">
-      <a href="#home">Store</a>
-      <a href="#contact">Product Services</a>
-      <a href="#about">Help & Support</a>
+      <a [routerLink]="['/store']">Store</a>
+      <a [routerLink]="['/product']">Product Services</a>
+      <a [routerLink]="['/help-support']">Help & Support</a>
     </div>
       <!-- <div class="header-right">
         <a class="active" href="#home">Home</a>

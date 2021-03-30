@@ -1,57 +1,15 @@
  <div class="owl-carousel">
-  <div class="carousel-card">
+  <div class="carousel-card " *ngFor="let item of data">
     <div class="row">
       <div class="col-md-12 image-center" style="margin-top: 51px;">
-        <img src="../../../CarouselTest/assets/image/placeholder1.png"  alt="">
+        <img src="../../../CarouselTest/assets/image/placeholder1.png">
       </div>
       <div class="col-md-12" style="margin-top: 51px;">
-        <p class="header-text text-center">Get a device</p>
+        <p class="header-text text-center">{{item.title}}</p>
       </div>
-      <div class="col-md-12" style="margin-top: 10px;">
-        <p class="subtext text-center">START HERE  ></p>
+      <div class="col-md-12 " style="margin-top: 10px"  >
+        <p class="subtext text-center" [ngClass]="item.active == true ? '' : 'hide-start'"  [routerLink]="[item.link]">START HERE  >  </p>
       </div>
     </div>
   </div>
-  <div class="carousel-card">
-    <div class="row">
-      <div class="col-md-12 image-center" style="margin-top: 51px;">
-        <img src="../../../CarouselTest/assets/image/placeholder1.png"  alt="">
-      </div>
-      <div class="col-md-12" style="margin-top: 51px;">
-        <p class="header-text text-center">Mobile internet</p>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-card"><div class="row">
-    <div class="col-md-12 image-center" style="margin-top: 51px;">
-      <img src="../../../CarouselTest/assets/image/placeholder1.png"  alt="">
-    </div>
-    <div class="col-md-12" style="margin-top: 51px;">
-      <p class="header-text text-center">Home internet</p>
-    </div>
-  </div></div>
-  <div class="carousel-card"><div class="row">
-    <div class="col-md-12 image-center" style="margin-top: 51px;">
-      <img src="../../../CarouselTest/assets/image/placeholder1.png"  alt="">
-    </div>
-    <div class="col-md-12" style="margin-top: 51px;">
-      <p class="header-text text-center">Add a phone-line</p>
-    </div>
-  </div></div>
-  <div class="carousel-card"><div class="row">
-    <div class="col-md-12 image-center" style="margin-top: 51px;">
-      <img src="../../../CarouselTest/assets/image/placeholder1.png"  alt="">
-    </div>
-    <div class="col-md-12" style="margin-top: 51px;">
-      <p class="header-text text-center">Upgrade</p>
-    </div>
-  </div></div>
-  <div class="carousel-card"><div class="row">
-    <div class="col-md-12 image-center" style="margin-top: 51px;">
-      <img src="../../../CarouselTest/assets/image/placeholder1.png"  alt="">
-    </div>
-    <div class="col-md-12" style="margin-top: 51px;">
-      <p class="header-text text-center">Consult </p>
-    </div>
-  </div></div>
-</div>
+  

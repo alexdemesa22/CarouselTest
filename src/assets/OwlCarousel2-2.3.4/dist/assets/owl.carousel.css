@@ -41,8 +41,8 @@
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0); }
   .owl-carousel .owl-item {
-    transform: scale(0.6);
-    width: 80%;
+    transform: scale(0.9,.7);
+    
     transition:.4s ease all;
     /* width: 100%;
     border-radius: 16px 16px 12px 12px;
